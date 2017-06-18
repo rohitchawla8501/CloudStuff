@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1 align="center" >Vikas Chandrashekar  1001248880 3.30-5.30 </h1>
+<hr>
+    <img align="center" src="https://s3.amazonaws.com/quiz2cloudcomputingassingment/vikas2016-06-30 20:41:08.582570Cloud.jpg" width="300" height="300"/><br>
+Enter your query:
+    <form action="{{url_for('querytext')}}" method="POST">
+	<input type="text" name="expression"><br>>
+        <input type="submit" value="Search" />
+    </form>
+    {{ eachfile }}
+    <br>
+    {{ total }}
+    <br>
+    {{all_text}}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <pre>
+                {% for message in messages %}
+{{ message }}
+                {% endfor %}
+            </pre>
+        {% endif %}
+    {% endwith %}
+<hr>
+{% endblock %}

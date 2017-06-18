@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+<form align="center" action="{{url_for('user')}}" method="GET">
+<input type="submit" class="btn btn-primary"  value="Back" />
+</form> 
+	{% for image in all_images %}
+	    <img src="{{image[0]}}" width="300" height="300"/><br>
+            {{image[0]}}
+            <br>
+            {% for comment in image[1].comments %}
+                 
+                 {{comment[1]}}: <b>{{comment[2]}}</b> at {{comment[0]}} <br>
+	    {% endfor %}
+	    <form action='/addcomment' method="POST">
+               <input type="hidden" value="{{image[0]}}" name="image">
+	       <input type="text" value="" maxlength="100" name="comment">
+	       <input type="submit" value="Comment" name="comment">
+            </form>
+	{% endfor %}
+{% endblock %}

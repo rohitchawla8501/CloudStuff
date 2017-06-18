@@ -1,0 +1,26 @@
+<html>
+<body>
+<h1></h1>
+<form action='/test' method='Post' enctype="multipart/form-data">
+<input type=text name='check'>
+<input type="file" name="file">
+<!--<input type="file" name="file" accept="uploaded_files/*" multiple> !-->
+<input type='submit' value='submit'>
+</form>
+<h1>Here you can download a file</h1>
+   <form id="download_form" action="/download" method="POST">
+     File Name: <input type="text" name="filename" placeholder="Enter file name"><br><br>
+     <input type="submit" name="download" value="download">
+   </form>
+<h1>Here you can delete a file</h1>
+   <form id="delete_form" action="/delete" method="POST">
+     File Name: <input type="text" name="filename" placeholder="Enter file name"><br><br>
+     <input type="submit" name="delete" value="delete">
+   </form>
+   <form id="delete_form" action="/listing" method="POST">
+<h1>Here you can List Files</h1>    
+	To list files
+     <input type="submit" name="listing" value="listing">
+   </form>
+   </body>
+</html>

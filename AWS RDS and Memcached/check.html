@@ -1,0 +1,21 @@
+<html>
+<body>
+<h1></h1>
+<form action='/test' method='Post' enctype="multipart/form-data">
+<input type=text name='check'>
+<input type="file" name="file">
+<!--<input type="file" name="file" accept="uploaded_files/*" multiple> !-->
+<input type='submit' value='submit'>
+</form>
+<h1>Here you run query on memcache</h1>
+   <form id="delete_form" action="/mems" method="POST">
+     
+     <input type="submit" name="delete" value="MEMCACHE">
+   </form>
+   <form id="delete_form" action="/500queries" method="POST">
+<h1>Here you can run 500queries on RDBMS</h1>    
+	To list files
+     <input type="submit" name="listing" value="500Queries">
+   </form>
+   </body>
+</html>

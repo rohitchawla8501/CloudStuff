@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body %}
+<form align="center" action="{{url_for('user')}}" method="GET">
+<input type="submit" class="btn btn-primary"  value="Back" />
+</form> 
+	{% for image in my_images %}
+	    <img src="{{image}}" width="300" height="300"/><br>
+	    <form action='{{url_for('delimages')}}' method="POST">
+               <input type="hidden" value="{{image}}" name="image">
+	       <input type="submit" value="Delete" name="delete">
+            </form>
+	{% endfor %}
+{% endblock %}

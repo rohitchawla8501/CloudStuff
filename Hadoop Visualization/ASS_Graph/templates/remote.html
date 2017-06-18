@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+    <h2>Vikas 1001248880  1001248880</h2>
+    Enter your query:
+    <form action="{{url_for('remote')}}" method="post">
+	Column1: <input type="text" name="expression1"><br>
+	cloum2: <input type="text" name="expression2"><br>
+	number of clusters: <input type="text" name="e3"><br>
+        <input type="submit" value="Upload" />
+    </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <pre>
+                {% for message in messages %}
+{{ message }}
+                {% endfor %}
+            </pre>
+        {% endif %}
+    {% endwith %}
+{% endblock %}
+{% block nav %}
+<li><a href="{{url_for('index')}}">Logout</a></li>
+{% endblock %}

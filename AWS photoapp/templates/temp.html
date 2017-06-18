@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+<form align="center" action="{{url_for('user')}}" method="GET">
+<input type="submit" class="btn btn-primary"  value="Back" />
+</form> 
+	{% for image in allmy_images %}
+	    <img src="{{image}}" width="300" height="300"/><br>
+	{% endfor %}
+{% endblock %}

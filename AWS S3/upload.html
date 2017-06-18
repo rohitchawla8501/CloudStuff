@@ -1,0 +1,25 @@
+<html>
+<body>
+<h1>Upload File</h1>
+<form action='/upload' method='Post' enctype="multipart/form-data">
+<input type="file" name="file">
+<!--<input type="file" name="file" accept="uploaded_files/*" multiple> !-->
+<input type='submit' value='submit'>
+</form>
+<h1>Download a file from Bucket</h1>
+   <form id="download_form" action="/download" method="POST">
+     File Name: <input type="text" name="filename" placeholder="Enter file name"><br><br>
+     <input type="submit" name="download" value="download">
+   </form>
+  <h1>Delete a file from a  Bucket</h1>
+   <form id="form2" action="/delete" method="POST">
+     File Name: <input type="text" name="filename" placeholder="Enter file name"><br><br>
+     <input type="submit" name="delete" value="delete">
+   </form> 
+   <h1>List files from a  Bucket</h1>
+   <form id="form3" action="/list" method="POST">
+     <input type="submit" name="list" value="list">
+   </form> 
+</form>
+</body>
+</html>
