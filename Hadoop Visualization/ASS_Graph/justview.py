@@ -1,7 +1,4 @@
-#Name: Vikas Chandrashekar
-#id  : 1001248880
-#term: Summer 2016
-#Assignment_2 
+
 
 import flask, flask.views
 from random import randint
